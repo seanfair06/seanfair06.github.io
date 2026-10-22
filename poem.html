@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ode to microwave</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+    :root {
+      --bg: #dfeef9;
+      --text: #163a5d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Special Elite", "Courier New", monospace;
+      cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAfCAYAAAD5h919AAAESElEQVR4AayWW0wcVRjH/+fMzM5ysVRuiywYWGJEoGlUqERi0toKsUlNVkH0QWvTpBovMfbFB182ffGxD6aJ+iKxBhUMSaUpFm3cBHtTa0iUSDVWJOnSIhe77GVm53L8BmUzqwPstp2cL/vNd775//Z853yzy+G63nvwkDISfqViJPxS9bm+N4oiiOTMu1ILdnOEKmqkepGxTwiDfxlLac+Fun8rEgDDbbhyQBxMFYy1kG4bAwuXKqW9w30vl9D9LQ/+XwUCMIpxWscewfgRnrSaP3r8tS0Uu6XB13taVn2yoioBLiuDKje3j+47VLxebj5xT5AkSwi2hNC8q12VFPluieGIbksPD/X1+W52zzxBtfc1ItgaQnVjEARVBdhOxtAvpaq6ojtfUGkFjKyg4QlqfawTgaZ6KH4fispKQasiUXZAAK8v3lHS9PU/MIrlP7hXKuccjDP4S4vR2d+NLdXlkFVFkmWph5by2fUiX9Apo9ez68X4ehNOnNNeObC27k60P7kbjTta/ZIk1cuSfNQpo4jk39AbgtZgVQ21qG1uwNa7KsEkXkKr2i0geoa/XWh1cvKxTUFuEaodqISg0hYxxg5L3H7rFPUYlVFy53n5BYGqQkF0UAnV0mLGJa4wzntSsvWBbFZvjWxSxoJAPr+6Wr57H7kfLY92gHqtjAl0CdM+vO18LOC1krVYQSB6La2WruGBZjQ9tA2Be+oZCVVCsBehKJ1D+15tpHvPURiIJGhvwOk0Or2lqD7qNVWiPSsDxPvctg8O9Rwsp7T/jYJBboXy+hps39sF2e+TCX4nl/l+SVEH3Dlr/k2BhKDDTaaW+FFJRz+0ow2h9lapvC5QByHa18Tdn9x9k49vmxaSS3HE55dXzUjrqz0WbGtCWaBiXYmCQXpaw8VPxzEx8Llj1sSHo+lvjp9Mnx8cS89OXk4DTIfHVTBIWDYMPYNMSoORSk/oiVR41ZKpsKHrYQhrvwcHm4KcUv05E0NsegZ/xRZgEygrxNhcRbLmjNuskqWz2XmX4wkyNB2WYcGi/dASKfw0fgHfj5zBle+maK8FZJ8MTkdcCCZ2RSOm254eHrZc+lnXE3RucAx/TE4juRzHhU9Oi/j8kmnohm0ZJmSfgo6n9qA6VJcVycfxBKWWVwh0GVNfXURi8UaKAG8z4NJybB6/nJ2ErCrUqL589LM5niCnT27MLeD6r7NxyzROGQIf0zvt9yR9AYpRWc2sQL5ODsiUQJriGv1kX7Us+6ptWdOy4G9usaUr9H/PFLYNM2NCT6QLhuWANG1lDoz1mmBPOJYxRf/iSmJu79g7OmMw6NtrViajXToR1RZnr2n/xii8+cgBPT9+PNk7emzqmZPHfnDs2S/enTkQHdAcGVrNMBMiYmqZSHo5HskkUhEn5szlYzmgjR74MfnzabN44ajbnNhGz7jn8gZFolGTeiTjNifmFtvI/xsAAP//dkgPyAAAAAZJREFUAwCNa7ZOzihE4AAAAABJRU5ErkJggg==') 0 0, auto;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    .page-frame {
+      min-height: 100vh;
+      padding: 28px;
+      border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACYUlEQVR4AezZ0W3rMAyFYTerdJXO0qE6S1fpLC34Rh/BZo5JoEHyX0CAZJFs8IUVrtzbJv/ePz5/nSHpm5MbsdP5Wk/X8TPz0P1qnXNjrvELqAaw9gQA9bzKaEBLIi/gFudAHj/fX2/OyLkxd3IjNnLyiGfOyLn3zLX2PTk5psqnQ70GLKMBLYm8AEA9rzL6Vp0JVQXNr+J1fzpf6+m6+vkar2vN1zUdqiLNNaBNQE0HVEWa6yugzR/53OmADn+/gAI6LDBcjg41QfO9Pub6/1RATdAqHNBKyNwH1ASrwsv3oVWBV9vXMzPO0Tzo0OGOABTQYYHhcu33oXd+npcJ41d++KsGFNBhgeFydCigwwLD5ehQQIcFhsvRoSZovrfHXO/2gJqgVTiglZC5D6gJVoU/8vvQ6rP/y76emXGO5kGHDn8tgAI6LDBcjg4FdFhguBwdCuiwwHA5OhTQYYHhcnQooMMCw+We7e/ywzxruXxvj7ne7fmVX81aTwBt8a3JgK4mrSe8D23xrcl06GrSegJoi29NBnQ1aT0BtMW3JgO6mrSeANriW5MBXU1aTwDdNgtQ7+5xn88DUIuzDga0NrIiALW46mDeh9ZGu4h8XsZcz1Q6dMfVXwDaN9xVAHTH0V/wPrRvuKtAh+44+gtA+4a7CoDuOPoLQK8ZHmYBekhzbQPQa26HWYAe0lzbKEHjvuoM/RhObsRqfrWOnDyqeN3PuTHXfV1r3T1y8ihBtSDrcwFAz33sXUBtsvOE8n2onhnVOp8nMa/idT9ynPFo+XToecPZu4DaZOcJgJ772Lt/AAAA//9uYujPAAAABklEQVQDABdgH+a3SIa7AAAAAElFTkSuQmCC") 28 / 28px / 0 round;
+      border-width: 28px;
+      border-style: solid;
+      background: var(--bg);
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content {
+      display: grid;
+      place-items: center;
+      width: 100%;
+    }
+
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transform: rotate(-1deg);
+      width: 100%;
+    }
+
+    .poem-title,
+    .poem-author,
+    .poem-text {
+      margin: 0;
+      color: var(--text);
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      line-height: 1.3;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.04);
+      font-family: "Special Elite", "Courier New", monospace;
+    }
+
+    .poem-title {
+      font-size: 24px;
+      margin-top: 18px;
+    }
+
+    .poem-author {
+      margin-top: 6px;
+      font-size: 18px;
+    }
+
+    .poem-text {
+      margin-top: 24px;
+      font-size: 18px;
+      max-width: 700px;
+      white-space: pre-line;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-frame">
+    <div class="content">
+      <div class="text-block">
+        <div class="poem-title">✧ode to microwave✧</div>
+        <div class="poem-author">by me!</div>
+
+        <div class="poem-text">snap. crackle. pop.
+it’s the red retro version.
+amillionfeatures.
+veg
+dish
+froz
+beef
+chik, etc.
+each one unlocked
+by the faint tick
+that comes from the twist of the knob.
+
+the door closes with a
+slam
+and the humming begins
+
+beep
+beep
+beep
+
+steam pours out from
+the inside like
+clouds
+on a sunny day
+
+the aroma comes with it
+finding your nose
+like they’ve been apart
+for a thousand years
+
+it’s quick
+only a minute and
+a half passes by,
+
+and i’m ready to eat.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
