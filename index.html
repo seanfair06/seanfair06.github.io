@@ -9,6 +9,7 @@
     :root {
       --bg: LemonChiffon;
       --text: #ad4c6a;
+      --button-pink: #ad4c6a;
     }
 
     * {
@@ -36,10 +37,13 @@
       border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACYElEQVR4AezZUU7rQAyF4dD18cYuWBC74I39gfzmnFHintgSVftfaaSZjG2qr2Z0J9w2+ff9/vnrDEnfnNyInc7XerqOn5mH7lfrnBtzjV9ANYC1JwCo51VGA1oSeQG3OAfy+Pj5enNGzo25kxuxkZNHPHNGzr1nrrXvyckxVT4d6jVgGQ1oSeQFAOp5ldG36kyoKmh+Fa/70/laT9fVz9d4XWu+rulQFWmuAW0CajqgKtJcXwFt/sjnTgd0+PsFFNBhgeFydKgJmu/1Mdf/pwJqglbhgFZC5j6gJlgVXr4PrQq82r6emXGO5kGHDncEoIAOCwyXa78PvfPzvEwYv/LDXzWggA4LDJejQwEdFhguR4cCOiwwXI4ONUHzvT3mercH1AStwgGthMx9QE2wKvyR34dWn/1f9vXMjHM0Dzp0+GsBFNBhgeFydCigwwLD5ehQQIcFhsvRoYAOCwyXo0MBHRYYLvdsf5cf5lnL5Xt7zPVuz6/8atZ6AmiLb00GdDVpPeF9aItvTaZDV5PWE0BbfGsyoKtJ6wmgLb41GdDVpPUE0BbfmgzoatJ6Aui2WYB6d4/7fB6AWpx1MKC1kRUBqMVVB/M+tDbaReTzMuZ6ptKhO67+AtC+4a4CoDuO/oL3oX3DXQU6dMfRXwDaN9xVAHTH0V8Aes3wMAvQQ5prG4BeczvMAvSQ5tpGCRr3VWfox3ByI1bzq3Xk5FHF637Ojbnu61rv7pGTRwmqBVmfCwB67mPvAmqTnSeU70P1zKjW+TyJeRWv+5HjjEfLp0PPG87eBdQmO08A9NzH3v0DAAD//+R/O7wAAAAGSURBVAMAMHI5ri7WLKQAAAAASUVORK5CYII=") 28 fill / 28px round;
       background: var(--bg);
       box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .content {
-      min-height: calc(100vh - 56px);
+      width: 100%;
       display: grid;
       place-items: center;
     }
@@ -50,19 +54,14 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      transform: rotate(-1deg);
     }
 
-    .name,
-    .subtitle,
-    .extra,
-    .poem-link {
+    .name, .subtitle, .extra, .poem-link {
       margin: 0;
       color: var(--text);
       text-transform: lowercase;
       letter-spacing: 1px;
       line-height: 1.3;
-      text-shadow: 1px 1px 0 rgba(0,0,0,0.04);
       font-family: "Special Elite", "Courier New", monospace;
     }
 
@@ -85,16 +84,52 @@
       margin-top: 34px;
       font-size: 24px;
       text-decoration: none;
-      color: var(--text);
       display: inline-block;
+      color: var(--text);
     }
 
     .poem-link:hover {
       opacity: 0.8;
     }
 
-    .poem-link:visited {
+    .olivia-button-wrap {
+      position: relative;
+      display: inline-block;
+      margin-top: 16px;
+    }
+
+    .olivia-button {
+      display: block;
+      width: 160px;
+      height: 34px;
+      background: var(--button-pink);
+      border-radius: 999px;
+      text-decoration: none;
+      border: 2px solid var(--button-pink);
+      box-shadow: 0 3px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    .olivia-button-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-family: "Special Elite", "Courier New", monospace;
+      text-transform: lowercase;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .olivia-button-wrap:hover .olivia-button {
+      filter: brightness(1.04);
+    }
+
+    a, a:hover, a:visited, a:active {
       color: var(--text);
+      text-decoration: none;
     }
   </style>
 </head>
@@ -105,6 +140,12 @@
         <div class="name">✧sean fairfield✧</div>
         <div class="subtitle">such a comedian &lt;3</div>
         <div class="extra">olivia tysm for teaching me</div>
+
+        <div class="olivia-button-wrap">
+          <a href="https://detectiveosprey.github.io" target="_blank" rel="noopener noreferrer" class="olivia-button"></a>
+          <div class="olivia-button-text">olivia's website</div>
+        </div>
+
         <a class="poem-link" href="poem.html">✧ode to microwave✧</a>
       </div>
     </div>
