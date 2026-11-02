@@ -10,6 +10,7 @@
       --bg: LemonChiffon;
       --text: #ad4c6a;
       --button-pink: #ad4c6a;
+      --custom-cursor: url('kbkdnjcr.png') 0 0, auto;
     }
 
     * {
@@ -23,7 +24,7 @@
       background: var(--bg);
       color: var(--text);
       font-family: "Special Elite", "Courier New", monospace;
-      cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAfCAYAAAD5h919AAAESElEQVR4AayWW0wcVRjH/+fMzM5ysVRuiywYWGJEoGlUqERi0toKsUlNVkH0QWvTpBovMfbFB182ffGxD6aJ+iKxBhUMSaUpFm3cBHtTa0iUSDVWJOnSIhe77GVm53L8BmUzqwPstp2cL/vNd775//Z853yzy+G63nvwkDISfqViJPxS9bm+N4oiiOTMu1ILdnOEKmqkepGxTwiDfxlLac+Fun8rEgDDbbhyQBxMFYy1kG4bAwuXKqW9w30vl9D9LQ/+XwUCMIpxWscewfgRnrSaP3r8tS0Uu6XB13taVn2yoioBLiuDKje3j+47VLxebj5xT5AkSwi2hNC8q12VFPluieGIbksPD/X1+W52zzxBtfc1ItgaQnVjEARVBdhOxtAvpaq6ojtfUGkFjKyg4QlqfawTgaZ6KH4fispKQasiUXZAAK8v3lHS9PU/MIrlP7hXKuccjDP4S4vR2d+NLdXlkFVFkmWph5by2fUiX9Apo9ez68X4ehNOnNNeObC27k60P7kbjTta/ZIk1cuSfNQpo4jk39AbgtZgVQ21qG1uwNa7KsEkXkKr2i0geoa/XWh1cvKxTUFuEaodqISg0hYxxg5L3H7rFPUYlVFy53n5BYGqQkF0UAnV0mLGJa4wzntSsvWBbFZvjWxSxoJAPr+6Wr57H7kfLY92gHqtjAl0CdM+vO18LOC1krVYQSB6La2WruGBZjQ9tA2Be+oZCVVCsBehKJ1D+15tpHvPURiIJGhvwOk0Or2lqD7qNVWiPSsDxPvctg8O9Rwsp7T/jYJBboXy+hps39sF2e+TCX4nl/l+SVEH3Dlr/k2BhKDDTaaW+FFJRz+0ow2h9lapvC5QByHa18Tdn9x9k49vmxaSS3HE55dXzUjrqz0WbGtCWaBiXYmCQXpaw8VPxzEx8Llj1sSHo+lvjp9Mnx8cS89OXk4DTIfHVTBIWDYMPYNMSoORSk/oiVR41ZKpsKHrYQhrvwcHm4KcUv05E0NsegZ/xRZgEygrxNhcRbLmjNuskqWz2XmX4wkyNB2WYcGi/dASKfw0fgHfj5zBle+maK8FZJ8MTkdcCCZ2RSOm254eHrZc+lnXE3RucAx/TE4juRzHhU9Oi/j8kmnohm0ZJmSfgo6n9qA6VJcVycfxBKWWVwh0GVNfXURi8UaKAG8z4NJybB6/nJ2ErCrUqL589LM5niCnT27MLeD6r7NxyzROGQIf0zvt9yR9AYpRWc2sQL5ODsiUQJriGv1kX7Us+6ptWdOy4G9usaUr9H/PFLYNM2NCT6QLhuWANG1lDoz1mmBPOJYxRf/iSmJu79g7OmMw6NtrViajXToR1RZnr2n/xii8+cgBPT9+PNk7emzqmZPHfnDs2S/enTkQHdAcGVrNMBMiYmqZSHo5HskkUhEn5szlYzmgjR74MfnzabN44ajbnNhGz7jn8gZFolGTeiTjNifmFtvI/xsAAP//dkgPyAAAAAZJREFUAwCNa7ZOzihE4AAAAABJRU5ErkJggg==') 0 0, auto;
+      cursor: var(--custom-cursor);
     }
 
     body {
@@ -34,7 +35,7 @@
       min-height: 100vh;
       padding: 28px;
       border: 28px solid transparent;
-      border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACYElEQVR4AezZUU7rQAyF4dD18cYuWBC74I39gfzmnFHintgSVftfaaSZjG2qr2Z0J9w2+ff9/vnrDEnfnNyInc7XerqOn5mH7lfrnBtzjV9ANYC1JwCo51VGA1oSeQG3OAfy+Pj5enNGzo25kxuxkZNHPHNGzr1nrrXvyckxVT4d6jVgGQ1oSeQFAOp5ldG36kyoKmh+Fa/70/laT9fVz9d4XWu+rulQFWmuAW0CajqgKtJcXwFt/sjnTgd0+PsFFNBhgeFydKgJmu/1Mdf/pwJqglbhgFZC5j6gJlgVXr4PrQq82r6emXGO5kGHDncEoIAOCwyXa78PvfPzvEwYv/LDXzWggA4LDJejQwEdFhguR4cCOiwwXI4ONUHzvT3mercH1AStwgGthMx9QE2wKvyR34dWn/1f9vXMjHM0Dzp0+GsBFNBhgeFydCigwwLD5ehQQIcFhsvRoYAOCwyXo0MBHRYYLvdsf5cf5lnL5Xt7zPVuz6/8atZ6AmiLb00GdDVpPeF9aItvTaZDV5PWE0BbfGsyoKtJ6wmgLb41GdDVpPUE0BbfmgzoatJ6Aui2WYB6d4/7fB6AWpx1MKC1kRUBqMVVB/M+tDbaReTzMuZ6ptKhO67+AtC+4a4CoDuO/oL3oX3DXQU6dMfRXwDaN9xVAHTH0V8Aes3wMAvQQ5prG4BeczvMAvSQ5tpGCRr3VWfox3ByI1bzq3Xk5FHF637Ojbnu61rv7pGTRwmqBVmfCwB67mPvAmqTnSeU70P1zKjW+TyJeRWv+5HjjEfLp0PPG87eBdQmO08A9NzH3v0DAAD//+R/O7wAAAAGSURBVAMAMHI5ri7WLKQAAAAASUVORK5CYII=") 28 fill / 28px round;
+      border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACYElEQVR4AezZUU7rQAyF4dD18cYuWBC74I39gfzmnFHintgSVftfaaSZjG2qr2Z0J9w2+ff9/vnrDEnfnNyInc7XerqOn5mH7lfrnJERiZR1GFVZr7BohWzUxvywRbnCmE7dZLzJfwrVcSl7dZyqGsHc2zZXAAADm5lqDMQAAAB4L3K1HkQAAABUFUExQxZ2HwbjKwaz7gUQ+G8pr0Yu7t6OeHvepZum/9H/1YQeA+niJz7T4p9i4FYiLq0Erzjp1q7CEgjCr4vPaxdTtw0ESR6hp1TdGYTM9g33hLs6WgAABJRU5ErkJggg==") 30 round;
       background: var(--bg);
       box-sizing: border-box;
       display: flex;
@@ -86,6 +87,7 @@
       text-decoration: none;
       display: inline-block;
       color: var(--text);
+      cursor: var(--custom-cursor);
     }
 
     .about-text {
@@ -93,16 +95,19 @@
       font-size: 24px;
       display: inline-block;
       color: var(--text);
+      cursor: var(--custom-cursor);
     }
 
     .poem-link:hover {
       opacity: 0.8;
+      cursor: var(--custom-cursor);
     }
 
     .olivia-button-wrap {
       position: relative;
       display: inline-block;
       margin-top: 16px;
+      cursor: var(--custom-cursor);
     }
 
     .olivia-button {
@@ -114,7 +119,7 @@
       text-decoration: none;
       border: 2px solid var(--button-pink);
       box-shadow: 0 3px 0 rgba(0, 0, 0, 0.06);
-      cursor: url('kbkdnjcr.png') 0 0, pointer;
+      cursor: var(--custom-cursor);
     }
 
     .olivia-button-text {
@@ -129,16 +134,18 @@
       text-transform: lowercase;
       pointer-events: none;
       z-index: 2;
+      cursor: var(--custom-cursor);
     }
 
     .olivia-button-wrap:hover .olivia-button {
       filter: brightness(1.04);
-      cursor: url('kbkdnjcr.png') 0 0, pointer;
+      cursor: var(--custom-cursor);
     }
 
     a, a:hover, a:visited, a:active {
       color: var(--text);
       text-decoration: none;
+      cursor: var(--custom-cursor);
     }
   </style>
 </head>
