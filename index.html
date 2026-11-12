@@ -37,7 +37,7 @@
 
     .broider {
       min-height: 100vh;
-      padding: 28px 28px 80px 28px;
+      padding: 28px 28px 100px;
       border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACkElEQVR4AeycAU7jMBBFsz3FHm2PuEfjFsAEtfx+S3Ecf0QgD2nUscczTl6GjysKt+W7v/7+f13U/Ho0Vv7Z4nY93w/ULuinDwEafoIA/XKgpVNq4Q2bci///ixqunf5Giu/5tRqTk1j5Wus/JpTqzk1jZWvsfJrTs1uiA41ILNDgM4StHyAGpDZ4e3pDFjaUDqhNrvDaL7uXb7n15zayeJ0qD+QyTFAJwF6OkCdyOT49nQGLG0qHVVrN2BmgwAdugHnSAigR6ht5AB0A86R0PnOoUfu4kQ5dGj4YQAUoGEC4XKcQ+NAwwWvXg4NDXcAQONA9X17+fV+Xi2z4WWq0KHhRw1QgIYJhMtxDo0DDRe8ejk0NNwBAI0DrbOnmp5Byw9v+OvKKbt3nw4NP2GAAjRMIFzuzOfQ8K2Gyr3r5NPnwernjBjf8iHO9zIAvZMIvQI0BPJeht/L30nsfRW9XD8XZppKh+4FuXMdQHeC2rsMoHtJ7VzHOXQnqMcy08xVR0VX6dAHqYwD0AzHRxWAPlBknN92Ds1Q2aoiernqp2kqHboF70AMoAegbaUAdIvOgVh7Dj1Q5FIpppmrjoqu0qHhbgAoQMMEwuXo0FGgoperfpqmAnQUaGc9QDuARsMAHSXWWQ/QZekgsrBp5qqjoqsANV6zQ4DOErR8gBqQ2SFARwmKXq76aZoK0FGgnfUA7QAaDQN0lFhnPUA7gJqwaeaqo6KrAG2IzU0AdI5fkw3QBsncBEBH+X3o5ef/jTZNBego0M56gHYAjYYBOkqss74FaprQ5J893lxweMLv3zS1BRre/2rlABp+4gD9cqCmCU9/11j6cfZ4GFBTzu/fFtChBmR2CNBZgpYPUAMyO3wDAAD//9kRt3EAAAAGSURBVAMAnBsir7BcgboAAAAASUVORK5CYII=") 28 / 28px / 0 round;
       border-width: 28px;
       border-style: solid;
@@ -131,15 +131,25 @@
       opacity: 0.8;
     }
 
-    button,
-    input[type="button"],
-    input[type="submit"] {
+    .broider footer {
       position: absolute;
-      left: 50%;
-      bottom: 28px;
-      transform: translateX(-50%);
-      z-index: 1000;
+      left: 28px;
+      right: 28px;
+      bottom: 8px;
+      text-align: center;
+      color: var(--text);
+      font-family: var(--text-font);
+    }
 
+    .broider footer p {
+      margin: 4px 0;
+    }
+
+    .broider footer a {
+      color: var(--text);
+    }
+
+    .broider footer button {
       padding: 6px 16px;
       border: none;
       border-radius: 999px;
@@ -197,6 +207,8 @@
         </li>
       </ul>
     </div>
+
+    <footer></footer>
   </main>
 </body>
 </html>
