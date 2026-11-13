@@ -28,17 +28,20 @@
       background: var(--background);
       color: var(--text);
       font-family: var(--text-font);
-      cursor: url("./kmjzwapu.png") 0 0, auto;
     }
 
     body {
       min-height: 100vh;
     }
 
+    body.zipper-locked {
+      overflow: hidden;
+    }
+
     .broider {
       min-height: 100vh;
       padding: 28px 28px 100px;
-      border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACkElEQVR4AeycAU7jMBBFsz3FHm2PuEfjFsAEtfx+S3Ecf0QgD2nUscczTl6GjysKt+W7v/7+f13U/Ho0Vv7Z4nY93w/ULuinDwEafoIA/XKgpVNq4Q2bci///ixqunf5Giu/5tRqTk1j5Wus/JpTqzk1jZWvsfJrTs1uiA41ILNDgM4StHyAGpDZ4e3pDFjaUDqhNrvDaL7uXb7n15zayeJ0qD+QyTFAJwF6OkCdyOT49nQGLG0qHVVrN2BmgwAdugHnSAigR6ht5AB0A86R0PnOoUfu4kQ5dGj4YQAUoGEC4XKcQ+NAwwWvXg4NDXcAQONA9X17+fV+Xi2z4WWq0KHhRw1QgIYJhMtxDo0DDRe8ejk0NNwBAI0DrbOnmp5Byw9v+OvKKbt3nw4NP2GAAjRMIFzuzOfQ8K2Gyr3r5NPnwernjBjf8iHO9zIAvZMIvQI0BPJeht/L30nsfRW9XD8XZppKh+4FuXMdQHeC2rsMoHtJ7VzHOXQnqMcy08xVR0VX6dAHqYwD0AzHRxWAPlBknN92Ds1Q2aoiernqp2kqHboF70AMoAegbaUAdIvOgVh7Dj1Q5FIpppmrjoqu0qHhbgAoQMMEwuXo0FGgoperfpqmAnQUaGc9QDuARsMAHSXWWQ/QZekgsrBp5qqjoqsANV6zQ4DOErR8gBqQ2SFARwmKXq76aZoK0FGgnfUA7QAaDQN0lFhnPUA7gJqwaeaqo6KrAG2IzU0AdI5fkw3QBsncBEBH+X3o5ef/jTZNBego0M56gHYAjYYBOkqss74FaprQ5J893lxweMLv3zS1BRre/2rlABp+4gD9cqCmCU9/11j6cfZ4GFBTzu/fFtChBmR2CNBZgpYPUAMyO3wDAAD//9kRt3EAAAAGSURBVAMAnBsir7BcgboAAAAASUVORK5CYII=") 28 / 28px / 0 round;
+      border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACkElEQVR4AeycAU7jMBBFsz3FHm2PuEfjFsAEtfx+S3Ecf0QgD2nUscczTl4GjysKt+W7v/7+f13U/Ho0Vv7Z4nY93w/ULuinDwEafoIA/XKgpVNq4Q2bci///ixqunf5Giu/5tRqTk1j5Wus/JpTqzk1jZWvsfJrTs1uiA41ILNDgM4StHyAGpDZ4e3pDFjaUDqhNrvDaL7uXb7n15zayeJ0qD+QyTFAJwF6OkCdyOT49nQGLG0qHVVrN2BmgwAdugHnSAigR6ht5AB0A86R0PnOoUfu4kQ5dGj4YQAUoGEC4XKcQ+NAwwWvXg4NDXcAQONA9X17+fV+Xi2z4WWq0KHhRw1QgIYJhMtxDo0DDRe8ejk0NNwBAI0DrbOnmp5Byw9v+OvKKbt3nw4NP2GAAjRMIFzuzOfQ8K2Gyr3r5NPnwernjBjf8iHO9zIAvZMIvQI0BPJeht/L30nsfRW9XD8XZppKh+4FuXMdQHeC2rsMoHtJ7VzHOXQnqMcy08xVR0VX6dAHqYwD0AzHRxWAPlBknN92Ds1Q2aoiernqp2kqHboF70AMoAegbaUAdIvOgVh7Dj1Q5FIpppmrjoqu0qHhbgAoQMMEwuXo0FGgoperfpqmAnQUaGc9QDuARsMAHSXWWQ/QZekgsrBp5qqjoqsANV6zQ4DOErR8gBqQ2SFARwmKXq76aZoK0FGgnfUA7QAaDQN0lFhnPUA7gJqwaeaqo6KrAG2IzU0AdI5fkw3QBsncBEBH+X3o5ef/jTZNBego0M56gHYAjYYBOkqss74FaprQ5J893lxweMLv3zS1BRre/2rlABp+4gD9cqCmCU9/11j6cfZ4GFBTzu/fFtChBmR2CNBZgpYPUAMyO3wDAAD//9kRt3EAAAAGSURBVAMAnBsir7BcgboAAAAASUVORK5CYII=") 28 / 28px / 0 round;
       border-width: 28px;
       border-style: solid;
       display: flex;
@@ -132,7 +135,7 @@
     }
 
     .pages-list a[href="poem.html"]:hover {
-      color: #39d0ff;
+      color: #00cfff;
       opacity: 1;
     }
 
@@ -151,9 +154,9 @@
     }
 
     .broider footer .validator-prompt {
+      margin: 0 0 12px;
       font-size: 12px;
       line-height: 1.3;
-      margin: 0 0 12px;
       text-transform: lowercase;
     }
 
@@ -173,6 +176,67 @@
       cursor: url("./kmjzwapu.png") 0 0, pointer;
     }
 
+    /* Draggable zipper cover */
+    .zipper-screen {
+      --reveal: 0px;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      touch-action: none;
+    }
+
+    .zipper-curtain {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: var(--background);
+      clip-path: inset(var(--reveal) 0 0 0);
+    }
+
+    .zipper-instructions {
+      position: absolute;
+      top: 22%;
+      left: 8%;
+      width: min(220px, 35vw);
+      margin: 0;
+      padding: 10px;
+      background: rgba(230, 240, 250, 0.9);
+      color: var(--text);
+      font: 12px/1.5 var(--text-font);
+      text-align: center;
+    }
+
+    .zipper-teeth {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .zipper-handle {
+      position: absolute;
+      top: max(0px, calc(var(--reveal) - 26px));
+      left: 50%;
+      z-index: 3;
+      width: 54px;
+      height: 54px;
+      transform: translateX(-50%);
+      border: 3px solid var(--background);
+      border-radius: 14px 14px 20px 20px;
+      background: var(--text);
+      color: #fff;
+      font: 18px var(--text-font);
+      cursor: grab;
+      touch-action: none;
+    }
+
+    .zipper-handle:active {
+      cursor: grabbing;
+    }
+
     @media (max-width: 480px) {
       .name {
         font-size: 36px;
@@ -189,11 +253,18 @@
         max-width: 90vw;
         font-size: 14px;
       }
+
+      .zipper-instructions {
+        top: 18%;
+        left: 5%;
+        width: 35vw;
+        padding: 6px;
+      }
     }
   </style>
 </head>
 
-<body>
+<body class="zipper-locked">
   <main class="broider">
     <div class="text-block">
       <div class="name">✧sean fairfield✧</div>
@@ -224,5 +295,117 @@
       <p class="validator-prompt">pls click the button ig</p>
     </footer>
   </main>
+
+  <div class="zipper-screen" id="zipper-screen">
+    <div class="zipper-curtain">
+      <p class="zipper-instructions">drag the zipper down to peek inside</p>
+    </div>
+
+    <svg class="zipper-teeth" id="zipper-teeth" aria-hidden="true"></svg>
+
+    <button
+      class="zipper-handle"
+      id="zipper-handle"
+      type="button"
+      aria-label="Drag down to reveal the website"
+    >↓</button>
+  </div>
+
+  <script>
+    const screen = document.getElementById("zipper-screen");
+    const handle = document.getElementById("zipper-handle");
+    const teethSvg = document.getElementById("zipper-teeth");
+
+    let reveal = 0;
+    let startY = 0;
+    let startReveal = 0;
+    let dragging = false;
+
+    function createSvgElement(name, attributes) {
+      const element = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        name
+      );
+
+      for (const [key, value] of Object.entries(attributes)) {
+        element.setAttribute(key, value);
+      }
+
+      return element;
+    }
+
+    function drawZipper() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const centerX = width / 2;
+
+      teethSvg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      teethSvg.replaceChildren();
+
+      // Teeth appear only on the still-covered portion below the slider.
+      const firstToothY = Math.min(height, reveal + 30);
+
+      for (let y = firstToothY; y < height; y += 14) {
+        const row = Math.floor(y / 14);
+        const toothColor = row % 2 === 0 ? "#0018a8" : "#1738c4";
+
+        const leftTooth = createSvgElement("path", {
+          d: `M ${centerX - 2} ${y}
+              L ${centerX - 12} ${y + 4}
+              L ${centerX - 2} ${y + 8} Z`,
+          fill: toothColor
+        });
+
+        const rightTooth = createSvgElement("path", {
+          d: `M ${centerX + 2} ${y}
+              L ${centerX + 12} ${y + 4}
+              L ${centerX + 2} ${y + 8} Z`,
+          fill: toothColor
+        });
+
+        teethSvg.append(leftTooth, rightTooth);
+      }
+    }
+
+    function setReveal(value) {
+      reveal = Math.max(0, Math.min(value, window.innerHeight));
+      screen.style.setProperty("--reveal", `${reveal}px`);
+      drawZipper();
+
+      if (reveal >= window.innerHeight - 2) {
+        screen.remove();
+        document.body.classList.remove("zipper-locked");
+      }
+    }
+
+    handle.addEventListener("pointerdown", (event) => {
+      dragging = true;
+      startY = event.clientY;
+      startReveal = reveal;
+      handle.setPointerCapture(event.pointerId);
+      event.preventDefault();
+    });
+
+    handle.addEventListener("pointermove", (event) => {
+      if (!dragging) return;
+      setReveal(startReveal + event.clientY - startY);
+    });
+
+    handle.addEventListener("pointerup", () => {
+      dragging = false;
+    });
+
+    handle.addEventListener("pointercancel", () => {
+      dragging = false;
+    });
+
+    window.addEventListener("resize", () => {
+      if (screen.isConnected) {
+        setReveal(reveal);
+      }
+    });
+
+    drawZipper();
+  </script>
 </body>
 </html>
